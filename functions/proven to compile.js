@@ -1,5 +1,5 @@
-compiled succesfully with 
-help/modification from Tyler:
+// compiled succesfully with 
+// help/modification from Tyler:
 
 const functions = require("firebase-functions");
 const cors = require('cors')({ origin: true });
@@ -12,9 +12,6 @@ const database = admin.database().ref('/items');
 exports.helloWorld = functions.https.onRequest((request, response) => {
   response.send("Hello from a Severless Database!");
 });
-
-
-
 
 exports.addItem = functions.https.onRequest((req, res) => {
   return cors(req, res, () => {
@@ -68,9 +65,9 @@ exports.addItem = functions.https.onRequest((req, res) => {
 
 
 
-Second Section, this is the refactored code, with the put
-and the get sections modified as per Tyler's 
-assistance: it will post, but not get:
+// Second Section, this is the refactored code, with the put
+// and the get sections modified as per Tyler's 
+// assistance: it will post, but not get:
 
 const functions = require("firebase-functions");
 const cors = require('cors')({ origin: true });

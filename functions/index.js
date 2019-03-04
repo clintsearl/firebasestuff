@@ -26,6 +26,7 @@ const getItemsFromDatabase = (res) => {
         })
     })
     };
+   const handelSubmit=( ) => {
 exports.addItem = functions.https.onRequest((req, res) => {
   return cors(req, res, () => {
     if(req.method !== 'POST') {
@@ -47,8 +48,7 @@ exports.addItem = functions.https.onRequest((req, res) => {
     // database.push({ item });
     getItemsFromDatabase(res)
 });
-});
-
+});}
 
 exports.delete = functions.https.onRequest((req, res) => {
     return cors(req, res, () => {
